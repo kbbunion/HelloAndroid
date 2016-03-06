@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView txvMsg=null;
+    private Button btnMsg=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final TextView txvMsg=(TextView) findViewById(R.id.msg);
-        Button btnMsg=(Button) findViewById(R.id.btnMsg);
-        btnMsg.setOnClickListener(new View.OnClickListener(){
+        txvMsg=(TextView) findViewById(R.id.msg);
+        btnMsg=(Button) findViewById(R.id.btnMsg);
+        btnMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 txvMsg.setText("Hi Android");
